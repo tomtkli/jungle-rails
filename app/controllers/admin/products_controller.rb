@@ -5,6 +5,10 @@ class Admin::ProductsController < ApplicationController
     @products = Product.order(id: :desc).all
   end
 
+  def show
+    @review = Review.new
+  end
+
   def new
     @product = Product.new
   end

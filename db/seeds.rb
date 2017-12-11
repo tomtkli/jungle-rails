@@ -134,3 +134,6 @@ cat3.products.create!({
 
 
 puts "DONE!"
+
+review1 = Product.first.reviews(rating: 5, description: 'I love this!')
+review1 - Product.last.reviews(Rating: 2, description: 'Mediocre.')
