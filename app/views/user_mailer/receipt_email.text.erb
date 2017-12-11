@@ -1,0 +1,19 @@
+Here is your receipt!
+===============================================
+
+<% @order.line_items.each do |item| %>
+
+<%= item.product.name %>:
+    <%= item.product.description %>
+    Quantity: <%= item.quantity %>
+    Price: <%= item.total_price_cents %>
+
+<% end %>
+
+TOTAL:
+<%=  @order.total_cents %>
+
+Thank you for shopping with us!
+
+-Jungle
+
